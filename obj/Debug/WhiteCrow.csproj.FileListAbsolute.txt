@@ -1,1 +1,10 @@
 d:\dropbox\dokumenty\visual studio 2013\Projects\WhiteCrow\WhiteCrow\bin\Debug\WhiteCrow.exe.config
+D:\Dropbox\Dokumenty\GitHub\WhiteCrow\bin\Debug\WhiteCrow.exe.config
+D:\Dropbox\Dokumenty\GitHub\WhiteCrow\bin\Debug\WhiteCrow.exe
+D:\Dropbox\Dokumenty\GitHub\WhiteCrow\bin\Debug\WhiteCrow.pdb
+D:\Dropbox\Dokumenty\GitHub\WhiteCrow\obj\Debug\WhiteCrow.MainWindow.resources
+D:\Dropbox\Dokumenty\GitHub\WhiteCrow\obj\Debug\WhiteCrow.Properties.Resources.resources
+D:\Dropbox\Dokumenty\GitHub\WhiteCrow\obj\Debug\WhiteCrow.csproj.GenerateResource.Cache
+D:\Dropbox\Dokumenty\GitHub\WhiteCrow\obj\Debug\WhiteCrow.exe
+D:\Dropbox\Dokumenty\GitHub\WhiteCrow\obj\Debug\WhiteCrow.pdb
+D:\Dropbox\Dokumenty\GitHub\WhiteCrow\obj\Debug\WhiteCrow.Windows.StudentsView.resources
