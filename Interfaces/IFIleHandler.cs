@@ -5,7 +5,7 @@ namespace WhiteCrow.Interfaces
     {
         IDatabase GetDB();
 
-        void SaveDB();
+        void SaveDB(IDatabase db);
 
     }
 }

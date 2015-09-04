@@ -4,8 +4,8 @@ namespace WhiteCrow.Interfaces
 {
     public interface ILendProcess
     {
-        Student LendBook(Student student, IBook book);
-        Student ReturnBook(Student student, IBook book);
+        Student LendBook(Student student, Book book);
+        Student ReturnBook(Student student, Book book);
 
 
 

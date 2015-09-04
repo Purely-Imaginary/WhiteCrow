@@ -1,16 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Collections.Generic;
 using WhiteCrow.Interfaces;
 
 namespace WhiteCrow.Models
 {
-    class Database : IDatabase
+   
+    public class Database : IDatabase
     {
-        List<IPerson> studentsList { get; set; }
+        public List<Student> StudentsList { get; set; }
 
-        public List<IPerson> GetStudents()
+        public List<Student> GetStudents()
         {
             return null;
         }  

@@ -18,7 +18,7 @@ namespace WhiteCrow.Models
             return db;
         }
 
-        public void SaveDB()
+        public void SaveDB(IDatabase db)
         {
             throw new NotImplementedException();
         }

@@ -1,10 +1,11 @@
 ﻿using System.Collections.Generic;
+using WhiteCrow.Models;
 
 namespace WhiteCrow.Interfaces
 {
     public interface IDatabase
     {
-        List<IPerson> GetStudents();
+        List<Student> GetStudents();
 
     }
 }

@@ -2,10 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Xml.Serialization;
 using WhiteCrow.Interfaces;
 
 namespace WhiteCrow.Models
 {
+    
     public class Student : IPerson
     {
         public string Name { get; set; }
@@ -14,7 +16,7 @@ namespace WhiteCrow.Models
 
         public int Class { get; set; }
 
-        public List<IBook> Books { get; set; } 
+        public List<Book> Books { get; set; } 
 
         public string GetName()
         {

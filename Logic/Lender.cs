@@ -9,15 +9,15 @@ namespace WhiteCrow.Logic
 {
     public class Lender : ILendProcess
     {
-        public Student LendBook(Student student, IBook book)
+        public Student LendBook(Student student, Book book)
         {
-            Book newBook = (Book) book;
+            var newBook = (Book) book;
             newBook.BorrowTime = DateTime.Now; 
             student.Books.Add(book);
             return student;
         }
 
-        public Student ReturnBook(Student student, IBook book)
+        public Student ReturnBook(Student student, Book book)
         {
             // TO DO CHECK FOR VALID ID
             var lookupId = book.GetId();
