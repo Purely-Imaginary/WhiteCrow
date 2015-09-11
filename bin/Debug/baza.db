@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Database xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <StudentsList>
+    <Student>
+      <Id>1</Id>
+      <Name>sdds</Name>
+      <Surname>fd</Surname>
+      <Class>1</Class>
+      <Books>
+        <Book>
+          <Name>dsa dsa</Name>
+          <Id>7489543</Id>
+          <Class>1</Class>
+          <BorrowTime>2015-09-04T18:09:41.8042161+02:00</BorrowTime>
+        </Book>
+      </Books>
+    </Student>
+    <Student>
+      <Id>2</Id>
+      <Name>Amadeusz</Name>
+      <Surname>Opac</Surname>
+      <Class>2</Class>
+      <Books />
+    </Student>
+    <Student>
+      <Id>3</Id>
+      <Name>Kacper</Name>
+      <Surname>Opac</Surname>
+      <Class>5</Class>
+      <Books />
+    </Student>
+    <Student>
+      <Id>4</Id>
+      <Name>Opac</Name>
+      <Surname>Robert</Surname>
+      <Class>6</Class>
+      <Books />
+    </Student>
+    <Student>
+      <Id>5</Id>
+      <Name>Wanda</Name>
+      <Surname>Opac</Surname>
+      <Class>3</Class>
+      <Books />
+    </Student>
+    <Student>
+      <Id>6</Id>
+      <Name>Mikołaj</Name>
+      <Surname>Opac</Surname>
+      <Class>3</Class>
+      <Books />
+    </Student>
+    <Student>
+      <Id>7</Id>
+      <Name>Grzegorz</Name>
+      <Surname>Brzęczyszczykiewicz</Surname>
+      <Class>4</Class>
+    </Student>
+  </StudentsList>
+  <BookList />
+</Database>

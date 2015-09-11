@@ -8,3 +8,6 @@ D:\Dropbox\Dokumenty\GitHub\WhiteCrow\obj\Debug\WhiteCrow.csproj.GenerateResourc
 D:\Dropbox\Dokumenty\GitHub\WhiteCrow\obj\Debug\WhiteCrow.exe
 D:\Dropbox\Dokumenty\GitHub\WhiteCrow\obj\Debug\WhiteCrow.pdb
 D:\Dropbox\Dokumenty\GitHub\WhiteCrow\obj\Debug\WhiteCrow.Windows.StudentsView.resources
+D:\Dropbox\Dokumenty\GitHub\WhiteCrow\obj\Debug\WhiteCrow.csprojResolveAssemblyReference.cache
+D:\Dropbox\Dokumenty\GitHub\WhiteCrow\obj\Debug\WhiteCrow.Windows.AddStudent.resources
+D:\Dropbox\Dokumenty\GitHub\WhiteCrow\obj\Debug\WhiteCrow.Windows.StudentsCard.resources

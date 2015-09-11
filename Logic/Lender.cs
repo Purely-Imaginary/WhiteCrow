@@ -1,13 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using WhiteCrow.Interfaces;
 using WhiteCrow.Models;
 
 namespace WhiteCrow.Logic
 {
-    public class Lender : ILendProcess
+    public class Lender
     {
         public Student LendBook(Student student, Book book)
         {
@@ -20,8 +17,8 @@ namespace WhiteCrow.Logic
         public Student ReturnBook(Student student, Book book)
         {
             // TO DO CHECK FOR VALID ID
-            var lookupId = book.GetId();
-            student.Books.Remove(student.Books.First(x => x.GetId().Equals(lookupId)));
+            var lookupId = book.Id;
+            student.Books.Remove(student.Books.First(x => x.Id.Equals(lookupId)));
             return student;
         }
     }

@@ -1,19 +1,18 @@
 ﻿using System;
 using System.IO;
 using System.Xml.Serialization;
-using WhiteCrow.Interfaces;
 using WhiteCrow.Models;
 
 namespace WhiteCrow.Logic
 {
-    public class XmlHandler : IFileHandler
+    public static  class XmlHandler
     {
-        private const string filename = "baza.db";
+        private const string Filename = "baza.db";
 
-        public IDatabase GetDB()
+        public static Database GetDB()
         {
             var db = new Database();
-            using (TextReader reader = new StreamReader(filename))
+            using (TextReader reader = new StreamReader(Filename))
             {
                 var s = new XmlSerializer(typeof(Database));
                 db = (Database)s.Deserialize(reader);
@@ -22,10 +21,10 @@ namespace WhiteCrow.Logic
             return db;
         }
 
-        
-        public void SaveDB(IDatabase db)
+
+        public static void SaveDB(Database db)
         {
-            using (TextWriter writer = new StreamWriter(filename))
+            using (TextWriter writer = new StreamWriter(Filename))
             {
                 var b = new XmlSerializer(db.GetType());
                 b.Serialize(writer, db);

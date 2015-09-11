@@ -1,26 +1,25 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using WhiteCrow.Interfaces;
+using WhiteCrow.Logic;
 
 namespace WhiteCrow.Models
 {
-    class FileHander : IFileHandler
+    class FileHander 
     {
         public string Filename { get; set; }
 
 
-        public IDatabase GetDB()
+        public Database GetDB()
         {
-            IDatabase db = new Database();
-
+            
+           
+            var db = XmlHandler.GetDB();
             return db;
         }
 
-        public void SaveDB(IDatabase db)
+        public void SaveDB(Database db)
         {
-            throw new NotImplementedException();
+           
+            XmlHandler.SaveDB(db);
         }
     }
 }

@@ -1,15 +1,12 @@
 ﻿using System.Collections.Generic;
-using WhiteCrow.Interfaces;
 
 namespace WhiteCrow.Models
 {
-    public class Database : IDatabase
+    public class Database 
     {
         public List<Student> StudentsList { get; set; }
 
-        public List<Student> GetStudents()
-        {
-            return StudentsList;
-        }
+        public List<Book> BookList { get; set; }
+        
     }
 }

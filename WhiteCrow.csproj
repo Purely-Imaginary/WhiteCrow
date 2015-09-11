@@ -62,15 +62,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Interfaces\IBook.cs" />
-    <Compile Include="Interfaces\IDatabase.cs" />
-    <Compile Include="Interfaces\IFileHandler.cs" />
-    <Compile Include="Interfaces\ILendProcess.cs" />
-    <Compile Include="Interfaces\IPerson.cs" />
+    <Compile Include="Displays\StudentsViewDisplay.cs" />
+    <Compile Include="Logic\DBHandler.cs" />
     <Compile Include="Logic\XmlHandler.cs" />
     <Compile Include="Models\Database.cs" />
     <Compile Include="Models\FileHandler.cs" />
     <Compile Include="Logic\Lender.cs" />
+    <Compile Include="Windows\AddStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\AddStudent.Designer.cs">
+      <DependentUpon>AddStudent.cs</DependentUpon>
+    </Compile>
     <Compile Include="Windows\MainWindow.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -81,12 +84,21 @@
     <Compile Include="Models\Student.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Windows\StudentsCard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\StudentsCard.Designer.cs">
+      <DependentUpon>StudentsCard.cs</DependentUpon>
+    </Compile>
     <Compile Include="Windows\StudentsView.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Windows\StudentsView.Designer.cs">
       <DependentUpon>StudentsView.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Windows\AddStudent.resx">
+      <DependentUpon>AddStudent.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Windows\MainWindow.resx">
       <DependentUpon>MainWindow.cs</DependentUpon>
     </EmbeddedResource>
@@ -100,6 +112,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Windows\StudentsCard.resx">
+      <DependentUpon>StudentsCard.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Windows\StudentsView.resx">
       <DependentUpon>StudentsView.cs</DependentUpon>
     </EmbeddedResource>
