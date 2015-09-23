@@ -1,0 +1,1 @@
+﻿klasa ma być jako 3A a nie tylko 3 aby sprawnie zlokalizować ucznia

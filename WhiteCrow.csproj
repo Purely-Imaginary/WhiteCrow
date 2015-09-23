@@ -62,17 +62,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Displays\BooksViewDisplay.cs" />
     <Compile Include="Displays\StudentsViewDisplay.cs" />
     <Compile Include="Logic\DBHandler.cs" />
     <Compile Include="Logic\XmlHandler.cs" />
     <Compile Include="Models\Database.cs" />
     <Compile Include="Models\FileHandler.cs" />
     <Compile Include="Logic\Lender.cs" />
-    <Compile Include="Windows\AddStudent.cs">
+    <Compile Include="Windows\Books\AddBook.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Windows\AddStudent.Designer.cs">
+    <Compile Include="Windows\Books\AddBook.Designer.cs">
+      <DependentUpon>AddBook.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Students\AddStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\Students\AddStudent.Designer.cs">
       <DependentUpon>AddStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Books\BooksView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\Books\BooksView.Designer.cs">
+      <DependentUpon>BooksView.cs</DependentUpon>
     </Compile>
     <Compile Include="Windows\MainWindow.cs">
       <SubType>Form</SubType>
@@ -84,20 +97,26 @@
     <Compile Include="Models\Student.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Windows\StudentsCard.cs">
+    <Compile Include="Windows\Students\StudentsCard.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Windows\StudentsCard.Designer.cs">
+    <Compile Include="Windows\Students\StudentsCard.Designer.cs">
       <DependentUpon>StudentsCard.cs</DependentUpon>
     </Compile>
-    <Compile Include="Windows\StudentsView.cs">
+    <Compile Include="Windows\Students\StudentsView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Windows\StudentsView.Designer.cs">
+    <Compile Include="Windows\Students\StudentsView.Designer.cs">
       <DependentUpon>StudentsView.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Windows\AddStudent.resx">
+    <EmbeddedResource Include="Windows\Books\AddBook.resx">
+      <DependentUpon>AddBook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Students\AddStudent.resx">
       <DependentUpon>AddStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Books\BooksView.resx">
+      <DependentUpon>BooksView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Windows\MainWindow.resx">
       <DependentUpon>MainWindow.cs</DependentUpon>
@@ -112,10 +131,10 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Windows\StudentsCard.resx">
+    <EmbeddedResource Include="Windows\Students\StudentsCard.resx">
       <DependentUpon>StudentsCard.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Windows\StudentsView.resx">
+    <EmbeddedResource Include="Windows\Students\StudentsView.resx">
       <DependentUpon>StudentsView.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
@@ -132,6 +151,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="TODOs.txt" />
     <Content Include="WhiteCrow.ico" />
   </ItemGroup>
   <ItemGroup>

@@ -14,6 +14,7 @@ namespace WhiteCrow.Windows
 
         private void StudentsView_Load(object sender, EventArgs e)
         {
+            DBHandler.CheckIntegrity();
             studentsDataView = StudentsViewDisplay.ShowStudentsGrid(studentsDataView, XmlHandler.GetDB());
         }
 
@@ -28,11 +29,6 @@ namespace WhiteCrow.Windows
             studentsDataView = StudentsViewDisplay.ShowStudentsGrid(studentsDataView, XmlHandler.GetDB());
         }
 
-        private void studentsDataView_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void studentsDataView_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             var dgv = (DataGridView) sender;
@@ -45,6 +41,35 @@ namespace WhiteCrow.Windows
         private void searchBar_TextChanged(object sender, EventArgs e)
         {
             studentsDataView = StudentsViewDisplay.FilterView(studentsDataView, searchBar.Text);
+        }
+
+        private void StudentsView_Activated(object sender, EventArgs e)
+        {
+            studentsDataView = StudentsViewDisplay.ShowStudentsGrid(studentsDataView, XmlHandler.GetDB());
+        }
+
+        private void deleteStudentButton_Click(object sender, EventArgs e)
+        {
+            var student = DBHandler.FindStudent(studentsDataView);
+            DBHandler.DeleteStudent(student, true);
+        }
+
+        private void deleteClassButton_Click(object sender, EventArgs e)
+        {
+            var student = DBHandler.FindStudent(studentsDataView);
+            DBHandler.DeleteClass(student.Class,true);
+
+        }
+
+
+        private void switchStripMenu_Click(object sender, EventArgs e)
+        {
+            DBHandler.NameSurnameSwitch();
+        }
+
+        private void studentsDataView_Sorted(object sender, EventArgs e)
+        {
+            StudentsViewDisplay.RestoreRowHeaders(studentsDataView);
         }
     }
 }

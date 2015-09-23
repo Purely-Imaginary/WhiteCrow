@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StudentsCard));
             this.nameLabel = new System.Windows.Forms.Label();
             this.surnameLabel = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -93,6 +94,7 @@
             this.deleteButton.TabIndex = 5;
             this.deleteButton.Text = "Skasuj";
             this.deleteButton.UseVisualStyleBackColor = true;
+            this.deleteButton.Click += new System.EventHandler(this.deleteButton_Click);
             // 
             // editButton
             // 
@@ -102,6 +104,7 @@
             this.editButton.TabIndex = 6;
             this.editButton.Text = "Edytuj";
             this.editButton.UseVisualStyleBackColor = true;
+            this.editButton.Click += new System.EventHandler(this.editButton_Click);
             // 
             // lendButton
             // 
@@ -125,6 +128,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.surnameLabel);
             this.Controls.Add(this.nameLabel);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "StudentsCard";
             this.Text = "StudentsCard";
             this.Load += new System.EventHandler(this.StudentsCard_Load);

@@ -2,60 +2,84 @@
 <Database xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <StudentsList>
     <Student>
-      <Id>1</Id>
-      <Name>sdds</Name>
-      <Surname>fd</Surname>
-      <Class>1</Class>
-      <Books>
-        <Book>
-          <Name>dsa dsa</Name>
-          <Id>7489543</Id>
-          <Class>1</Class>
-          <BorrowTime>2015-09-04T18:09:41.8042161+02:00</BorrowTime>
-        </Book>
-      </Books>
-    </Student>
-    <Student>
-      <Id>2</Id>
-      <Name>Amadeusz</Name>
-      <Surname>Opac</Surname>
-      <Class>2</Class>
-      <Books />
+      <Id>4</Id>
+      <Name>Bożena</Name>
+      <Surname>Powaga</Surname>
+      <Class>3</Class>
+      <BookId />
     </Student>
     <Student>
       <Id>3</Id>
-      <Name>Kacper</Name>
+      <Name>Robert</Name>
       <Surname>Opac</Surname>
       <Class>5</Class>
-      <Books />
-    </Student>
-    <Student>
-      <Id>4</Id>
-      <Name>Opac</Name>
-      <Surname>Robert</Surname>
-      <Class>6</Class>
-      <Books />
-    </Student>
-    <Student>
-      <Id>5</Id>
-      <Name>Wanda</Name>
-      <Surname>Opac</Surname>
-      <Class>3</Class>
-      <Books />
+      <BookId />
     </Student>
     <Student>
       <Id>6</Id>
-      <Name>Mikołaj</Name>
+      <Name>Wanda</Name>
       <Surname>Opac</Surname>
-      <Class>3</Class>
-      <Books />
+      <Class>2</Class>
+      <BookId />
     </Student>
     <Student>
-      <Id>7</Id>
-      <Name>Grzegorz</Name>
-      <Surname>Brzęczyszczykiewicz</Surname>
-      <Class>4</Class>
+      <Id>8</Id>
+      <Name>Sałatka</Name>
+      <Surname>Gyrosowa</Surname>
+      <Class>Bardzo dobra</Class>
+      <BookId />
+    </Student>
+    <Student>
+      <Id>9</Id>
+      <Name>amadeusz</Name>
+      <Surname>opac</Surname>
+      <Class>3</Class>
+      <BookId />
+    </Student>
+    <Student>
+      <Id>10</Id>
+      <Name>vbn</Name>
+      <Surname>fgh</Surname>
+      <Class>3</Class>
+      <BookId />
     </Student>
   </StudentsList>
-  <BookList />
+  <BookList>
+    <Book>
+      <Name>fgh</Name>
+      <Publisher>jvg</Publisher>
+      <Id>567</Id>
+      <Class>hjv</Class>
+      <Value>567</Value>
+      <TimeAdded>2015-09-22T18:00:24.085205+02:00</TimeAdded>
+      <Notes />
+    </Book>
+    <Book>
+      <Name>fndsjk</Name>
+      <Publisher>fggf</Publisher>
+      <Id>121</Id>
+      <Class>2</Class>
+      <Value>18</Value>
+      <TimeAdded>2015-09-22T18:03:43.5421654+02:00</TimeAdded>
+      <Notes>sss</Notes>
+    </Book>
+    <Book>
+      <Name>fdsfq</Name>
+      <Publisher>t58</Publisher>
+      <Id>123</Id>
+      <Class>njyitorn</Class>
+      <Value>563</Value>
+      <TimeAdded>2015-09-22T18:04:59.2518996+02:00</TimeAdded>
+      <Notes>dff</Notes>
+    </Book>
+    <Book>
+      <Name />
+      <Publisher />
+      <Id />
+      <Class />
+      <Value>23.8</Value>
+      <TimeAdded>2015-09-22T18:05:15.3756924+02:00</TimeAdded>
+      <Notes />
+    </Book>
+  </BookList>
 </Database>

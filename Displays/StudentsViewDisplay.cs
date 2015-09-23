@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Data;
-using System.Linq;
+﻿using System.Linq;
 using System.Windows.Forms;
 using WhiteCrow.Logic;
 using WhiteCrow.Models;
@@ -14,15 +12,18 @@ namespace WhiteCrow.Displays
             dgv.Columns.Clear();
             dgv.Rows.Clear();
             dgv = MakeColumns(dgv);
-            foreach (var student in db.StudentsList)
+            int index = 1;
+            foreach (var student in db.StudentsList.OrderBy(x => x.Id))
             {
-                dgv.Rows.Add(FillRow(student));
+                dgv.Rows.Add(FillRow(student,index));
+                index++;
             }
+            
+            dgv.Columns[0].Visible = false;
             return dgv;
-
         }
 
-        static DataGridView MakeColumns(DataGridView dgv)
+        private static DataGridView MakeColumns(DataGridView dgv)
         {
             dgv.Columns.Add("ID", "ID");
             dgv.Columns.Add("Surname", "Nazwisko");
@@ -31,21 +32,22 @@ namespace WhiteCrow.Displays
             dgv.Columns.Add("BookCount", "Ilość książek");
             return dgv;
         }
-        static DataGridViewRow FillRow(Student student)
+
+        private static DataGridViewRow FillRow(Student student, int indexNumber)
         {
             var row = new DataGridViewRow();
-            for (int i = 0; i < 5; i++)
+            for (var i = 0; i < 5; i++)
             {
-                 row.Cells.Add(new DataGridViewTextBoxCell());
+                row.Cells.Add(new DataGridViewTextBoxCell());
             }
 
             row.Cells[0].Value = student.Id;
             row.Cells[1].Value = student.Surname;
             row.Cells[2].Value = student.Name;
             row.Cells[3].Value = student.Class;
-            row.Cells[4].Value = student.Books.Count;
+            row.Cells[4].Value = student.BookId.Count;
+            row.HeaderCell.Value = indexNumber.ToString();
             return row;
-
         }
 
         public static Student GetStudent(DataGridViewCell cell)
@@ -60,18 +62,29 @@ namespace WhiteCrow.Displays
 
             var validStudentsList =
                 db.StudentsList.Where(
-                    x => x.Id.ToString().Contains(input) 
-                        || x.Name.ToLower().Contains(input) 
-                        || x.Surname.ToLower().Contains(input));
+                    x => x.Id.ToString().Contains(input)
+                         || x.Name.ToLower().Contains(input)
+                         || x.Surname.ToLower().Contains(input));
 
             dgv.Rows.Clear();
-           
+            int index = 1;
             foreach (var student in validStudentsList)
             {
-                dgv.Rows.Add(FillRow(student));
+                dgv.Rows.Add(FillRow(student,index));
+                index++;
             }
             return dgv;
         }
 
+        public static DataGridView RestoreRowHeaders(DataGridView dgv)
+        {
+            int index = 1;
+            foreach (DataGridViewRow row in dgv.Rows)
+            {
+                row.HeaderCell.Value = index.ToString();
+                index++;
+            }
+            return dgv;
+        }
     }
 }

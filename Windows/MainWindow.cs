@@ -21,5 +21,11 @@ namespace WhiteCrow
             var studentsView = new StudentsView();
             studentsView.Show();
         }
+
+        private void button2_Click(object sender, System.EventArgs e)
+        {
+            var booksView = new BooksView();
+            booksView.Show();
+        }
     }
 }

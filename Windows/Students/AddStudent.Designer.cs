@@ -28,13 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddStudent));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.nameTextbox = new System.Windows.Forms.TextBox();
             this.surnameTextbox = new System.Windows.Forms.TextBox();
-            this.classCombo = new System.Windows.Forms.ComboBox();
             this.addButton = new System.Windows.Forms.Button();
+            this.classTextbox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -78,23 +79,9 @@
             this.surnameTextbox.Size = new System.Drawing.Size(100, 20);
             this.surnameTextbox.TabIndex = 4;
             // 
-            // classCombo
-            // 
-            this.classCombo.FormattingEnabled = true;
-            this.classCombo.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6"});
-            this.classCombo.Location = new System.Drawing.Point(93, 50);
-            this.classCombo.Name = "classCombo";
-            this.classCombo.Size = new System.Drawing.Size(100, 21);
-            this.classCombo.TabIndex = 5;
-            // 
             // addButton
             // 
+            this.addButton.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.addButton.Location = new System.Drawing.Point(59, 96);
             this.addButton.Name = "addButton";
             this.addButton.Size = new System.Drawing.Size(75, 23);
@@ -103,20 +90,29 @@
             this.addButton.UseVisualStyleBackColor = true;
             this.addButton.Click += new System.EventHandler(this.addButton_Click);
             // 
+            // classTextbox
+            // 
+            this.classTextbox.Location = new System.Drawing.Point(93, 50);
+            this.classTextbox.Name = "classTextbox";
+            this.classTextbox.Size = new System.Drawing.Size(100, 20);
+            this.classTextbox.TabIndex = 5;
+            // 
             // AddStudent
             // 
+            this.AcceptButton = this.addButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(210, 140);
+            this.Controls.Add(this.classTextbox);
             this.Controls.Add(this.addButton);
-            this.Controls.Add(this.classCombo);
             this.Controls.Add(this.surnameTextbox);
             this.Controls.Add(this.nameTextbox);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AddStudent";
-            this.Text = "AddStudent";
+            this.Text = "Dodaj";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -129,7 +125,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox nameTextbox;
         private System.Windows.Forms.TextBox surnameTextbox;
-        private System.Windows.Forms.ComboBox classCombo;
         private System.Windows.Forms.Button addButton;
+        private System.Windows.Forms.TextBox classTextbox;
     }
 }

@@ -8,9 +8,9 @@ namespace WhiteCrow.Logic
     {
         public Student LendBook(Student student, Book book)
         {
-            var newBook = (Book) book;
-            newBook.BorrowTime = DateTime.Now; 
-            student.Books.Add(book);
+            var newBook = book;
+            //newBook.BorrowTime = DateTime.Now; 
+            student.BookId.Add(book.Id);
             return student;
         }
 
@@ -18,7 +18,7 @@ namespace WhiteCrow.Logic
         {
             // TO DO CHECK FOR VALID ID
             var lookupId = book.Id;
-            student.Books.Remove(student.Books.First(x => x.Id.Equals(lookupId)));
+            student.BookId.Remove(student.BookId.First(x => x.Equals(lookupId)));
             return student;
         }
     }
